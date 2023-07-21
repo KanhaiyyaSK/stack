@@ -51,10 +51,10 @@ const Chatbot = ({ setIsOpen, isVerified, setIsVerified }) => {
 
 	const handleEmailSubmit = async (e) => {
 		e.preventDefault();
-		// const response = await fetch(
-		// 	"https://stackoverflow-backend-q507.onrender.com/otp/sendOTP",
-		// 	{
-				const response = await fetch("http://localhost:5000/otp/sendOTP", {
+		const response = await fetch(
+			"https://stackai.onrender.com/otp/sendOTP",
+			{
+				// const response = await fetch("http://localhost:5000/otp/sendOTP", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -79,10 +79,10 @@ const Chatbot = ({ setIsOpen, isVerified, setIsVerified }) => {
 
 	const handleOTPSubmit = async (e) => {
 		e.preventDefault();
-		// const response = await fetch(
-		// 	"https://stackoverflow-backend-q507.onrender.com/otp/verifyOTP",
-		// 	{
-				const response = await fetch("http://localhost:5000/otp/verifyOTP", {
+		const response = await fetch(
+			"https://stackai.onrender.com/otp/verifyOTP",
+			{
+				// const response = await fetch("http://localhost:5000/otp/verifyOTP", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
