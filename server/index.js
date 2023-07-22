@@ -18,7 +18,7 @@ app.use(
     origin: function (origin, callback) {
       const allowedOrigins = [
         "http://localhost:3000",
-        "https://master--extraordinary-banoffee-fbeaae.netlify.app/",
+        "https://frolicking-sundae-58e3d9.netlify.app/",
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
