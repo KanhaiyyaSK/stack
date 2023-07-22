@@ -1,32 +1,34 @@
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
 
-const { AUTH_EMAIL, AUTH_PASS } = process.env
+const { AUTH_EMAIL, AUTH_PASS } = process.env;
+console.log(AUTH_EMAIL);
+console.log(AUTH_PASS);
 
 let transporter = nodemailer.createTransport({
-  host: 'smtp-mail.outlook.com',
+  service: "gmail",
   auth: {
     user: AUTH_EMAIL,
     pass: AUTH_PASS,
-  }
-})
+  },
+});
 
 // test transporter
 transporter.verify((error, success) => {
   if (error) {
-    console.log(error)
+    console.log(error);
   } else {
-    console.log('Ready for messages')
-    console.log(success)
+    console.log("Ready for messages");
+    console.log(success);
   }
-})
+});
 
 const sendEmail = async (mailOptions) => {
   try {
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail(mailOptions);
     return;
   } catch (error) {
-    throw (error)
+    throw error;
   }
-}
+};
 
-export default sendEmail
+export default sendEmail;
