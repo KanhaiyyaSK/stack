@@ -18,7 +18,7 @@ app.use(
     origin: function (origin, callback) {
       const allowedOrigins = [
         "http://localhost:3000",
-        "https://frolicking-sundae-58e3d9.netlify.app/",
+        "https://frolicking-sundae-58e3d9.netlify.app",
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
@@ -29,6 +29,9 @@ app.use(
     credentials: true,
   })
 );
+
+
+
 app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
