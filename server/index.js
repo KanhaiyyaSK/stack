@@ -19,6 +19,7 @@ app.use(
       const allowedOrigins = [
         "http://localhost:3000",
         "https://frolicking-sundae-58e3d9.netlify.app",
+        "https://64ca2cb1716e88051c535ff1--vocal-dango-e6e8fa.netlify.app/"
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
